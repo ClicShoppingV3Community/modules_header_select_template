@@ -1,0 +1,5 @@
+
+ module_header_select_template_title = Do you want to enable this module Template (shop display) ?
+ module_header_select_template_description = The module allow to customer to select a specific template on a page
+
+ module_header_select_template_text = Please, select a template to see the new design on this page
