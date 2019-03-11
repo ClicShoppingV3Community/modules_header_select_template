@@ -13,7 +13,7 @@ use ClicShopping\OM\CLICSHOPPING;
 ?>
 <div class="col-md-<?php echo $content_width; ?>">
   <div class="separator"></div>
-  <span><?php echo  CLICSHOPPING::getDef('module_header_select_template_text'); ?></span>
+  <label for="TemplateCustomerSelected"><?php echo  CLICSHOPPING::getDef('module_header_select_template_text'); ?></label>
 <?php echo $form; ?>
     <span class="text-md-center"><?php echo $header_template; ?></span>
 <?php
