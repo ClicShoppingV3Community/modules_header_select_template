@@ -57,7 +57,7 @@
       $endform ='</form>';
 
       ob_start();
-      require($CLICSHOPPING_Template->getTemplateModules($this->group . '/content/header_select_template'));
+      require_once($CLICSHOPPING_Template->getTemplateModules($this->group . '/content/header_select_template'));
       $data .= ob_get_clean();
 
       $data .='<!-- header elect template  end -->' . "\n";
