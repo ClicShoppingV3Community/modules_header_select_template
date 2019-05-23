@@ -47,7 +47,7 @@
 
       $data ='<!-- header select template  start -->' . "\n";
 
-      if (is_null($_GET['TemplateCustomerSelected']) ) {
+      if (!isset($_GET['TemplateCustomerSelected'])) {
         $header_template = $CLICSHOPPING_Template->getDropDownSelectedTemplateByCustomer();
       } else {
         $header_template = $CLICSHOPPING_Template->getDropDownSelectedTemplateByCustomer($_GET['TemplateCustomerSelected']);
@@ -57,10 +57,13 @@
       $endform ='</form>';
 
       ob_start();
+
+      $data ='<!-- header select template  start -->' . "\n";
+
       require_once($CLICSHOPPING_Template->getTemplateModules($this->group . '/content/header_select_template'));
       $data .= ob_get_clean();
 
-      $data .='<!-- header elect template  end -->' . "\n";
+      $data .='<!-- header select template  end -->' . "\n";
 
       $CLICSHOPPING_Template->addBlock($data, $this->group);
     }
@@ -119,7 +122,7 @@
           'configuration_value' => 'all',
           'configuration_description' => 'Sélectionnez les pages o&ugrave; la boxe doit être présente',
           'configuration_group_id' => '6',
-          'sort_order' => '7',
+          'sort_order' => '1',
           'set_function' => 'clic_cfg_set_select_pages_list',
           'date_added' => 'now()'
         ]
