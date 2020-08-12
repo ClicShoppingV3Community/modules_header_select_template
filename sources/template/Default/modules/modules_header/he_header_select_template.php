@@ -33,7 +33,7 @@
       $this->description = CLICSHOPPING::getDef('module_header_mailchimp_description');
 
 
-      if ( defined('MODULE_HEADER_SELECT_TEMPLATE_STATUS') ) {
+      if (defined('MODULE_HEADER_SELECT_TEMPLATE_STATUS')) {
         $this->sort_order = MODULE_HEADER_SELECT_TEMPLATE_SORT_ORDER;
         $this->enabled = (MODULE_HEADER_SELECT_TEMPLATE_STATUS == 'True');
         $this->pages = MODULE_HEADER_SELECT_TEMPLATE_DISPLAY_PAGES;
@@ -53,7 +53,7 @@
         $header_template = $CLICSHOPPING_Template->getDropDownSelectedTemplateByCustomer($_GET['TemplateCustomerSelected']);
       }
 
-      $form =  HTML::form('select_template',CLICSHOPPING::getBaseNameIndex() . '?' .CLICSHOPPING::getAllGET(), 'post', null, ['session_id' => true]);
+      $form = HTML::form('select_template',CLICSHOPPING::getBaseNameIndex() . '?' .CLICSHOPPING::getAllGET(), 'post', null, ['session_id' => true]);
       $endform ='</form>';
 
       ob_start();
