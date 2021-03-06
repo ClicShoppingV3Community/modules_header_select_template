@@ -14,8 +14,8 @@
   use ClicShopping\OM\CLICSHOPPING;
 
   class he_header_select_template {
-    public $code;
-    public $group;
+    public string $code;
+    public string $group;
     public string $title;
     public string $description;
     public ?int $sort_order = 0;
@@ -33,7 +33,7 @@
       $this->description = CLICSHOPPING::getDef('module_header_mailchimp_description');
 
 
-      if (defined('MODULE_HEADER_SELECT_TEMPLATE_STATUS')) {
+      if (\defined('MODULE_HEADER_SELECT_TEMPLATE_STATUS')) {
         $this->sort_order = MODULE_HEADER_SELECT_TEMPLATE_SORT_ORDER;
         $this->enabled = (MODULE_HEADER_SELECT_TEMPLATE_STATUS == 'True');
         $this->pages = MODULE_HEADER_SELECT_TEMPLATE_DISPLAY_PAGES;
@@ -73,7 +73,7 @@
     }
 
     public function check() {
-      return defined('MODULE_HEADER_SELECT_TEMPLATE_STATUS');
+      return \defined('MODULE_HEADER_SELECT_TEMPLATE_STATUS');
     }
 
     public function install() {
