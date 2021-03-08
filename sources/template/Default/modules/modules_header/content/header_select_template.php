@@ -13,10 +13,10 @@ use ClicShopping\OM\CLICSHOPPING;
 ?>
 <div class="col-md-<?php echo $content_width; ?>">
   <div class="separator"></div>
-  <div class="alert alert-warning text-md-center">Do not forget to copy the css inside your new directory and clear your cache.
+  <div class="alert alert-warning text-center">Do not forget to copy the css inside your new directory and clear your cache.
   <label for="TemplateCustomerSelected"><?php echo  CLICSHOPPING::getDef('module_header_select_template_text'); ?></label>
 <?php echo $form; ?>
-    <span class="text-md-center"><?php echo $header_template; ?></span>
+    <span class="text-center"><?php echo $header_template; ?></span>
 <?php
   echo $endform;
 ?>
